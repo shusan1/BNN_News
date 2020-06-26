@@ -1,0 +1,2 @@
+rootProject.name='BNN_News'
+include ':app'
