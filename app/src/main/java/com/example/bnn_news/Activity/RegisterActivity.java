@@ -10,13 +10,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.bnn_news.BLL.UserBLL;
+import com.example.bnn_news.Models.UserModel;
 import com.example.bnn_news.R;
+import com.example.bnn_news.Utlis.Helpers;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText first, last, phone, email, password;
     Button btnregister;
     TextView loginback;
-
+    UserBLL userBLL;
 
 
     @Override
@@ -30,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
         password = findViewById(R.id.passwordreg);
         btnregister = findViewById(R.id.btnreg);
         loginback = findViewById(R.id.backlogin);
-
+        userBLL = new UserBLL();
 
         loginback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,9 +44,29 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
 
+        btnregister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signUp();
+            }
+        });
     }
 
+    private void signUp() {
+        Helpers.StrictMode();
+        String emailreg = email.getText().toString();
+        String passwordreg = password.getText().toString();
+        String firstname = first.getText().toString();
+        String lastname = last.getText().toString();
+        String phno = phone.getText().toString();
+        UserModel authUser = userBLL.registerUser(emailreg, passwordreg, firstname, lastname, phno);
+        if (authUser != null) {
+            Toast.makeText(this, "Register Successfull", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Register Failed", Toast.LENGTH_SHORT).show();
+        }
 
+    }
 
 }
 
