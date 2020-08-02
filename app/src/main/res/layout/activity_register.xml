@@ -17,7 +17,8 @@
         android:layout_centerHorizontal="true" />
 
     <EditText
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="185dp"
+        android:fontFamily="sans-serif-light"
         android:id="@+id/firstname"
         android:layout_width="350dp"
         android:layout_height="45dp"
@@ -33,7 +34,8 @@
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/Lastname"
+        android:id="@+id/lastname"
+        android:fontFamily="sans-serif-light"
         android:layout_width="350dp"
         android:layout_height="45dp"
         android:background="#11000000"
@@ -49,13 +51,14 @@
 
 
     <EditText
-        android:id="@+id/Phoneno"
+        android:id="@+id/phoneno"
         android:layout_width="350dp"
         android:layout_height="45dp"
+        android:fontFamily="sans-serif-light"
         android:background="#11000000"
         android:textColor="#fff"
-        android:layout_below="@id/Lastname"
-        android:drawableLeft="@drawable/ic_action_user"
+        android:layout_below="@id/lastname"
+        android:drawableLeft="@drawable/ic_action_phone"
         android:hint="Phone Number"
         android:textColorHint="#fff"
         android:inputType="number"
@@ -68,10 +71,11 @@
         android:id="@+id/emailreg"
         android:layout_width="350dp"
         android:layout_height="45dp"
+        android:fontFamily="sans-serif-light"
         android:background="#11000000"
         android:textColor="#fff"
-        android:layout_below="@id/Phoneno"
-        android:drawableLeft="@drawable/ic_action_user"
+        android:layout_below="@id/phoneno"
+        android:drawableLeft="@drawable/ic_action_email"
         android:hint="E-mail"
         android:textColorHint="#fff"
         android:inputType="text"
@@ -84,14 +88,15 @@
         android:id="@+id/passwordreg"
         android:layout_width="350dp"
         android:layout_height="45dp"
+        android:fontFamily="sans-serif-light"
         android:background="#11000000"
         android:textColor="#fff"
         android:layout_below="@id/emailreg"
-        android:drawableLeft="@drawable/ic_action_user"
+        android:drawableLeft="@drawable/ic_action_pass"
         android:hint="Password"
         android:textColorHint="#fff"
         android:inputType="textPassword"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="45dp"
         android:layout_centerHorizontal="true"
         android:autofillHints="" />
 
@@ -99,8 +104,8 @@
 
 
     <Button
-        android:id="@+id/btnregister"
-        android:layout_marginBottom="30dp"
+        android:id="@+id/btnreg"
+        android:layout_marginBottom="20dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -113,19 +118,17 @@
 
     <TextView
         android:id="@+id/backlogin"
-        android:textSize="17dp"
+        android:textSize="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to Login"
-        android:textAllCaps="true"
-        android:layout_below="@+id/btnregister"
+        android:text="Already have an account?"
+        android:layout_below="@+id/btnreg"
         android:textColor="#fff"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:textAlignment="center"
         android:layout_marginBottom="45dp"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"
          />
 
 

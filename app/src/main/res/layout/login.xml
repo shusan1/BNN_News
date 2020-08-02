@@ -21,31 +21,34 @@
         android:id="@+id/emaillog"
         android:layout_width="350dp"
         android:layout_height="45dp"
+        android:fontFamily="sans-serif-light"
         android:background="#11000000"
         android:textColor="#fff"
-        android:drawableStart="@drawable/ic_action_user"
+        android:drawableStart="@drawable/ic_action_email"
         android:hint="E-mail"
         android:textColorHint="#fff"
         android:inputType="textPersonName"
         android:textSize="16dp"
         android:layout_marginBottom="35dp"
         android:layout_centerHorizontal="true"
-        android:autofillHints="" />
+         />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="350dp"
         android:layout_height="45dp"
+        android:fontFamily="sans-serif-light"
         android:background="#11000000"
         android:textColor="#fff"
         android:layout_below="@id/emaillog"
         android:drawableLeft="@drawable/ic_action_pass"
         android:hint="Password"
+        android:textSize="16dp"
         android:textColorHint="#fff"
         android:inputType="textPassword"
         android:layout_marginBottom="60dp"
         android:layout_centerHorizontal="true"
-        android:autofillHints="" />
+         />
 
 
     <Button
@@ -61,7 +64,7 @@
         android:textColor="#ffffff" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/logreg"
         android:textSize="17dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
